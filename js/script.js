@@ -1,5 +1,5 @@
-const km = prompt('Inserisci i Kilometri che vuoi percorerre');
-const age= prompt('Inserisci la Tua età');
+const km = prompt('Inserisci i kilometri che vuoi percorrere');
+const age= prompt('Inserisci la tua età');
 const kmPrice= 0.21;
 const ticketPrice = km * kmPrice;
 
@@ -16,4 +16,13 @@ else {
     document.getElementById('user-text').innerHTML = 'Congratulazioni, stai prenotando al miglior prezzo!';
 }
 
-document.getElementById('ticket-price').innerHTML = finalPrice.toFixed(2) + ' Euro';
+
+if (isNaN(age)) {
+    alert("Si prega di inserire l'età");
+}
+
+if (isNaN(km)) {
+    alert("Si prega di inserire la distanza in KM");
+}
+
+document.getElementById('ticket-price').innerHTML = 'Il Prezzo è ' + finalPrice.toFixed(2) + ' Euro';
